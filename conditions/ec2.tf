@@ -3,7 +3,7 @@ resource "aws_instance" "terraform"{
     vpc_security_group_ids=[aws_security_group.allow-all.id]
     instance_type= var.environment == "dev" ? "t3.medium" : "t3.small"
     tags = {
-        Name = "terraform-1"
+        Name = "terraform"
         Terraform = "true"
     }
 }
